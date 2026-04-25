@@ -1,0 +1,3 @@
+[submodule "vendor/AnonimisationModule"]
+	path = vendor/AnonimisationModule
+	url = https://github.com/Winkey86/AnonimisationModule

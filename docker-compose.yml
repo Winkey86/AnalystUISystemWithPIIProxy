@@ -1,0 +1,111 @@
+services:
+  open-webui:
+    image: ${OPEN_WEBUI_IMAGE:-ghcr.io/open-webui/open-webui:v0.9.1}
+    container_name: open-webui
+    restart: unless-stopped
+    ports:
+      - "${OPEN_WEBUI_PORT:-3000}:8080"
+    environment:
+      OPENAI_API_BASE_URL: http://proxy-provider:8081/v1
+      OPENAI_API_KEY: ${PROXY_PROVIDER_API_KEY:-local-dev-key}
+      DEFAULT_MODELS: yandex-private
+      WEBUI_SECRET_KEY: ${OPENWEBUI_SECRET_KEY:-change-me}
+      ENABLE_PERSISTENT_CONFIG: ${OPENWEBUI_ENABLE_PERSISTENT_CONFIG:-true}
+    volumes:
+      - open-webui-data:/app/backend/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/', timeout=5).read()"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 180s
+    depends_on:
+      proxy-provider:
+        condition: service_healthy
+
+  proxy-provider:
+    build:
+      context: ./proxy-provider
+    container_name: proxy-provider
+    restart: unless-stopped
+    ports:
+      - "${PROXY_PROVIDER_PORT:-8081}:8081"
+    environment:
+      PROXY_PROVIDER_API_KEY: ${PROXY_PROVIDER_API_KEY:-local-dev-key}
+      REQUIRE_PROXY_AUTH: ${REQUIRE_PROXY_AUTH:-false}
+      PRIVACY_DEFAULT_ENABLED: ${PRIVACY_DEFAULT_ENABLED:-true}
+      FORCE_PRIVATE_FOR_YANDEX_MODEL_URI: ${FORCE_PRIVATE_FOR_YANDEX_MODEL_URI:-true}
+      YANDEX_BASE_URL: ${YANDEX_BASE_URL:-https://llm.api.cloud.yandex.net/v1}
+      YANDEX_API_KEY: ${YANDEX_API_KEY:-}
+      YANDEX_FOLDER_ID: ${YANDEX_FOLDER_ID:-}
+      YANDEX_MODEL_ID: ${YANDEX_MODEL_ID:-qwen3-235b-a22b-fp8}
+      ANON_PROXY_URL: ${ANON_PROXY_URL:-http://anon-proxy:8000}
+      ANON_INTERNAL_API_KEY: ${ANON_INTERNAL_API_KEY:-local-anon-internal-key}
+      FORCE_NON_STREAM: ${FORCE_NON_STREAM:-false}
+      DEBUG_LOG_CONTENT: ${DEBUG_LOG_CONTENT:-false}
+      AUDIT_LOG_CONTENT: ${AUDIT_LOG_CONTENT:-false}
+      AUDIT_DB_PATH: /data/audit.db
+      AUDIT_RETENTION: ${AUDIT_RETENTION:-500}
+      ADMIN_UI_ENABLED: ${ADMIN_UI_ENABLED:-true}
+      ADMIN_UI_API_KEY: ${ADMIN_UI_API_KEY:-}
+      PROVIDER_CONFIG_PATH: /data/providers.json
+      UPSTREAM_TIMEOUT_SECONDS: ${UPSTREAM_TIMEOUT_SECONDS:-120}
+    volumes:
+      - proxy-provider-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8081/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    depends_on:
+      anon-proxy:
+        condition: service_healthy
+
+  anon-proxy:
+    build:
+      context: ./vendor/AnonimisationModule
+      dockerfile: proxy/Dockerfile
+    container_name: anon-proxy
+    restart: unless-stopped
+    environment:
+      TARGET_LLM_URL: http://proxy-provider:8081/_internal/yandex
+      LLM_API_KEY: ${ANON_INTERNAL_API_KEY:-local-anon-internal-key}
+      HMAC_SECRET: ${HMAC_SECRET:-change-me-at-least-32-chars}
+      NER_SERVICE_URL: http://anon-ner:8080
+    expose:
+      - "8000"
+    volumes:
+      - ./vendor/AnonimisationModule/config:/app/config:ro
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:8000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    depends_on:
+      anon-ner:
+        condition: service_healthy
+
+  anon-ner:
+    build:
+      context: ./vendor/AnonimisationModule/ner-service
+    container_name: anon-ner
+    restart: unless-stopped
+    environment:
+      NER_SPACY_MODEL: ${NER_SPACY_MODEL:-ru_core_news_lg}
+      NER_SPACY_MODEL_EN: ${NER_SPACY_MODEL_EN:-en_core_web_sm}
+      NER_REGEX_FALLBACK_ENABLED: ${NER_REGEX_FALLBACK_ENABLED:-true}
+      NER_PROCESSING_TIMEOUT_SECONDS: ${NER_PROCESSING_TIMEOUT_SECONDS:-10}
+    expose:
+      - "8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen(urllib.request.Request('http://localhost:8080/health', method='POST'))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 60s
+
+volumes:
+  open-webui-data:
+  proxy-provider-data:
