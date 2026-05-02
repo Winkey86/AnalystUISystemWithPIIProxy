@@ -62,6 +62,24 @@ services:
       anon-proxy:
         condition: service_healthy
 
+  data-tools:
+    build:
+      context: ./services/data-tools
+    container_name: data-tools
+    restart: unless-stopped
+    ports:
+      - "8090:8090"
+    volumes:
+      - data-tools-artifacts:/data/artifacts
+      - ./data/input:/data/input:ro
+    environment:
+      DATA_INPUT_DIR: /data/input
+      ARTIFACT_ROOT: /data/artifacts
+      MAX_PREVIEW_ROWS: 50
+      MAX_QUERY_ROWS: 1000
+      QUERY_TIMEOUT_SECONDS: 10
+      MAX_FILE_SIZE_MB: 100
+
   anon-proxy:
     build:
       context: ./vendor/AnonimisationModule
@@ -109,3 +127,4 @@ services:
 volumes:
   open-webui-data:
   proxy-provider-data:
+  data-tools-artifacts:
