@@ -1,0 +1,58 @@
+{
+  "dataset_id": "ecommerce_orders_2024",
+  "name": "E-Commerce Orders 2024 (Complex)",
+  "description": "Синтетические данные интернет-магазина за 2024 год. 1200 заказов, 862 уникальных клиента. Включает сезонность (пики в ноябре/декабре), региональные коэффициенты, B2B/B2C сегменты, мошеннические транзакции, рейтинги и затраты на доставку. Намеренные дефекты для тестирования агентов.",
+  "rows": 1200,
+  "unique_customers": 862,
+  "columns": {
+    "order_id":           {"type": "int",    "description": "Уникальный ID заказа (от 10000)"},
+    "order_date":         {"type": "date",   "description": "Дата оформления (YYYY-MM-DD)"},
+    "customer_id":        {"type": "str",    "description": "ID клиента (C#####). ~25% — повторные покупки"},
+    "customer_segment":   {"type": "str",    "description": "Сегмент: B2C_Premium, B2C_Standard, B2C_Budget, B2B_Small, B2B_Medium"},
+    "region":             {"type": "str",    "description": "8 городов России. Распределение пропорционально населению"},
+    "product_name":       {"type": "str",    "description": "Название товара (12 SKU)"},
+    "category":           {"type": "str",    "description": "Категория: Electronics, Sports, Clothing, Books, Home"},
+    "subcategory":        {"type": "str",    "description": "Подкатегория товара"},
+    "acquisition_channel":{"type": "str",    "description": "Канал привлечения: organic_search, paid_search, social_media, email, referral, direct"},
+    "qty":                {"type": "int",    "description": "Количество единиц. B2B_Medium имеет значительно большие объёмы. ~0.5% — выбросы (500-2000)"},
+    "unit_price":         {"type": "float",  "description": "Цена за единицу (с региональным коэффициентом). ~0.8% — выбросы (цена x100)"},
+    "discount_pct":       {"type": "float",  "description": "Скидка 0–0.4. Выше в сезонные пики (ноябрь, декабрь)"},
+    "revenue":            {"type": "float",  "description": "Выручка = qty * unit_price * (1 - discount_pct)"},
+    "profit":             {"type": "float",  "description": "Прибыль. ~2% NULL значений"},
+    "payment_method":     {"type": "str",    "description": "card, sbp, credit, wallet, invoice"},
+    "is_fraud_flag":      {"type": "int",    "description": "0/1. Частота зависит от метода оплаты (card: 1.2%, sbp: 0.4%)"},
+    "order_status":       {"type": "str",    "description": "delivered, returned, cancelled, in_transit"},
+    "delivery_date":      {"type": "date",   "description": "Дата доставки. NULL для cancelled"},
+    "delivery_days":      {"type": "int",    "description": "Дней доставки. Москва: 2-3, Красноярск: 6-9. NULL для cancelled"},
+    "delivery_cost":      {"type": "float",  "description": "Стоимость доставки (руб.). Зависит от веса и удалённости региона"},
+    "customer_rating":    {"type": "int",    "description": "Оценка 1-5. Только для delivered. ~1.5% NULL (не оставили отзыв). Мошеннические — чаще 1-2"},
+    "product_weight_kg":  {"type": "float",  "description": "Вес товара в кг (справочное)"}
+  },
+  "known_issues": [
+    "profit: ~24 NULL значения (~2%)",
+    "customer_rating: NULL для не-delivered заказов + ~1.5% delivered без оценки",
+    "delivery_date / delivery_days: NULL для cancelled",
+    "unit_price: ~10 выбросов с ценой x100 (ошибки ввода)",
+    "qty: ~6 выбросов 500-2000 (аномальные B2B заказы)"
+  ],
+  "interesting_patterns": [
+    "Сезонность: ноябрь +35%, декабрь +50% к среднему",
+    "B2B_Medium: средний qty в 4.8x выше B2C_Standard",
+    "Мошенничество: card 1.2% vs sbp 0.4% — значимая разница",
+    "Москва и СПб: unit_price на 40-60% выше регионов",
+    "delivery_cost коррелирует с product_weight_kg",
+    "returned заказы имеют более низкий customer_rating"
+  ],
+  "suggested_analyses": [
+    "Сезонная декомпозиция revenue по месяцам",
+    "Сравнение конверсии по acquisition_channel",
+    "Fraud analysis: payment_method vs is_fraud_flag (chi-square тест)",
+    "Корреляционная матрица: qty, price, discount, revenue, profit, delivery_cost",
+    "Топ-10 клиентов по LTV (суммарный revenue)",
+    "Кластеризация клиентов по (qty, revenue, discount_pct)",
+    "Boxplot delivery_days по регионам",
+    "Распределение customer_rating по категориям товаров",
+    "Выявление выбросов unit_price через IQR",
+    "Profit margin = profit/revenue — динамика по месяцам"
+  ]
+}
