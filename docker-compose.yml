@@ -12,7 +12,44 @@ services:
       OPENAI_API_KEY: ${PROXY_PROVIDER_API_KEY:-local-dev-key}
       DEFAULT_MODELS: yandex-private
       WEBUI_SECRET_KEY: ${OPENWEBUI_SECRET_KEY:-change-me}
+      ENABLE_DIRECT_CONNECTIONS: ${ENABLE_DIRECT_CONNECTIONS:-true}
       ENABLE_PERSISTENT_CONFIG: ${OPENWEBUI_ENABLE_PERSISTENT_CONFIG:-true}
+      BYPASS_EMBEDDING_AND_RETRIEVAL: ${BYPASS_EMBEDDING_AND_RETRIEVAL:-true}
+      RAG_EMBEDDING_MODEL: ${RAG_EMBEDDING_MODEL:-}
+      RAG_EMBEDDING_MODEL_AUTO_UPDATE: ${RAG_EMBEDDING_MODEL_AUTO_UPDATE:-false}
+      TOOL_SERVER_CONNECTIONS: >
+        [
+          {
+            "type": "openapi",
+            "url": "http://analyst-mcp-tools:8000",
+            "spec_type": "url",
+            "spec": "",
+            "path": "openapi.json",
+            "auth_type": "none",
+            "key": "",
+            "config": {"enable": true},
+            "info": {
+              "id": "analyst-mcp-tools",
+              "name": "Analyst MCP Tools",
+              "description": "MCP analytics agents and direct data utilities exposed through MCPO."
+            }
+          },
+          {
+            "type": "openapi",
+            "url": "http://data-tools-mcp-tools:8000",
+            "spec_type": "url",
+            "spec": "",
+            "path": "openapi.json",
+            "auth_type": "none",
+            "key": "",
+            "config": {"enable": true},
+            "info": {
+              "id": "data-tools-mcp-tools",
+              "name": "Data Tools MCP",
+              "description": "Deterministic dataset loading, schema inspection, profiling, preview, and safe SQL tools exposed through MCPO."
+            }
+          }
+        ]
     volumes:
       - open-webui-data:/app/backend/data
     healthcheck:
@@ -23,6 +60,10 @@ services:
       start_period: 180s
     depends_on:
       proxy-provider:
+        condition: service_healthy
+      analyst-mcp-tools:
+        condition: service_healthy
+      data-tools-mcp-tools:
         condition: service_healthy
 
   proxy-provider:
@@ -81,6 +122,31 @@ services:
       MAX_QUERY_ROWS: 1000
       QUERY_TIMEOUT_SECONDS: 10
       MAX_FILE_SIZE_MB: 100
+
+  data-tools-mcp:
+    build:
+      context: ./services/data-tools
+    container_name: data-tools-mcp
+    restart: unless-stopped
+    command: ["python", "-m", "app.mcp_server"]
+    ports:
+      - "${DATA_TOOLS_MCP_PORT:-8091}:8091"
+    volumes:
+      - data-tools-artifacts:/data/artifacts
+      - ./data/input:/data/input:ro
+    environment:
+      DATA_INPUT_DIR: /data/input
+      ARTIFACT_ROOT: /data/artifacts
+      MAX_PREVIEW_ROWS: 50
+      MAX_QUERY_ROWS: 1000
+      QUERY_TIMEOUT_SECONDS: 10
+      MAX_FILE_SIZE_MB: 100
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8091/health', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
 
   anon-proxy:
     build:
@@ -153,6 +219,56 @@ services:
       proxy-provider:
         condition: service_healthy
       anon-proxy:
+        condition: service_healthy
+
+  analyst-mcp-tools:
+    image: ghcr.io/open-webui/mcpo:main
+    container_name: analyst-mcp-tools
+    restart: unless-stopped
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --server-type
+      - sse
+      - --
+      - http://analyst-mcp:8082/sse
+    ports:
+      - "${ANALYST_MCP_TOOLS_PORT:-8083}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/openapi.json', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    depends_on:
+      analyst-mcp:
+        condition: service_healthy
+
+  data-tools-mcp-tools:
+    image: ghcr.io/open-webui/mcpo:main
+    container_name: data-tools-mcp-tools
+    restart: unless-stopped
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --server-type
+      - sse
+      - --
+      - http://data-tools-mcp:8091/sse
+    ports:
+      - "${DATA_TOOLS_MCP_TOOLS_PORT:-8092}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/openapi.json', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    depends_on:
+      data-tools-mcp:
         condition: service_healthy
 
 volumes:

@@ -19,14 +19,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger("analyst-mcp")
 
-mcp = FastMCP("analyst-mcp")
+mcp = FastMCP("analyst-mcp", host=settings.mcp_host, port=settings.mcp_port)
 
 
+@mcp.custom_route("/health", methods=["GET"])
 async def _health_endpoint(request: Request) -> JSONResponse:
     return JSONResponse({"status": "ok", "service": "analyst-mcp"})
-
-
-mcp.custom_route("/health", _health_endpoint, methods=["GET"])
 
 
 def _audited(fn: Callable) -> Callable:
@@ -111,4 +109,4 @@ def get_audit_log(limit: int = 100) -> dict[str, Any]:
 
 if __name__ == "__main__":
     logger.info("Starting analyst-mcp on %s:%s", settings.mcp_host, settings.mcp_port)
-    mcp.run(transport="sse", host=settings.mcp_host, port=settings.mcp_port)
+    mcp.run(transport="sse")
