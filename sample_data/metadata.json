@@ -1,0 +1,28 @@
+{
+  "dataset_id": "sales_2024",
+  "name": "Sales 2024",
+  "description": "Синтетические данные о продажах по регионам России за 2024 год. Содержит намеренные дефекты для тестирования data_quality_agent: ~3% пустых значений revenue, ~1% отрицательных units.",
+  "rows": 500,
+  "columns": {
+    "order_id":   {"type": "int",    "description": "Уникальный номер заказа"},
+    "date":       {"type": "date",   "description": "Дата заказа (YYYY-MM-DD)"},
+    "region":     {"type": "str",    "description": "Регион: Moscow, Saint Petersburg, Novosibirsk, Yekaterinburg, Kazan"},
+    "category":   {"type": "str",    "description": "Категория товара: Electronics, Clothing, Food, Sports, Books"},
+    "manager":    {"type": "str",    "description": "Имя менеджера продаж"},
+    "units":      {"type": "int",    "description": "Количество единиц товара (отрицательные значения — выбросы)"},
+    "unit_price": {"type": "float",  "description": "Цена за единицу, руб."},
+    "discount":   {"type": "float",  "description": "Скидка (0–0.3)"},
+    "revenue":    {"type": "float",  "description": "Выручка = units * unit_price * (1 - discount). NULL в ~3% строк"}
+  },
+  "known_issues": [
+    "revenue: ~15 пустых значений",
+    "units: ~5 отрицательных значений (выбросы)"
+  ],
+  "suggested_analyses": [
+    "Топ-регионы и категории по выручке",
+    "Динамика продаж по месяцам",
+    "Распределение скидок",
+    "Сравнение менеджеров по среднему чеку",
+    "Корреляция units vs revenue"
+  ]
+}

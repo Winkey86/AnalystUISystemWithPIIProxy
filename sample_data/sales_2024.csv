@@ -1,0 +1,501 @@
+order_id,date,region,category,manager,units,unit_price,discount,revenue
+1,2024-11-23,Moscow,Electronics,Sidorova M.,16,3425.84,0.22,42754.48
+2,2024-02-14,Kazan,Sports,Ivanov A.,2,1496.06,0.07,2782.67
+3,2024-11-28,Kazan,Sports,Petrov S.,29,8880.06,0.24,
+4,2024-12-23,Yekaterinburg,Food,Sidorova M.,10,3308.18,0.23,25472.99
+5,2024-07-02,Novosibirsk,Books,Sidorova M.,3,10973.0,0.16,27651.96
+6,2024-10-09,Novosibirsk,Books,Sidorova M.,37,2965.1,0.02,107514.53
+7,2024-02-10,Saint Petersburg,Electronics,Kozlov D.,18,6855.81,0.25,92553.43
+8,2024-12-09,Novosibirsk,Electronics,Volkova E.,41,2649.97,0.22,84746.04
+9,2024-11-23,Kazan,Clothing,Sidorova M.,50,11662.4,0.07,542301.6
+10,2024-05-17,Moscow,Clothing,Volkova E.,46,4788.7,0.2,176224.16
+11,2024-08-22,Saint Petersburg,Food,Petrov S.,16,11200.34,0.16,150532.57
+12,2024-10-25,Yekaterinburg,Food,Petrov S.,9,7691.94,0.03,67150.64
+13,2024-11-17,Saint Petersburg,Sports,Volkova E.,5,5833.03,0.18,23915.42
+14,2024-10-10,Moscow,Electronics,Volkova E.,49,4075.7,0.19,161764.53
+15,2024-08-20,Moscow,Food,Volkova E.,49,2761.91,0.27,98793.52
+16,2024-11-23,Kazan,Books,Petrov S.,10,5671.32,0.05,53877.54
+17,2024-01-01,Kazan,Food,Kozlov D.,2,1766.83,0.11,3144.96
+18,2024-05-02,Moscow,Clothing,Volkova E.,6,1376.24,0.15,7018.82
+19,2024-03-05,Saint Petersburg,Sports,Volkova E.,11,4049.34,0.26,32961.63
+20,2024-10-03,Saint Petersburg,Food,Kozlov D.,43,9783.18,0.13,365988.76
+21,2024-04-25,Moscow,Food,Ivanov A.,38,8353.43,0.18,
+22,2024-01-31,Saint Petersburg,Electronics,Ivanov A.,22,1155.77,0.07,23647.05
+23,2024-03-08,Kazan,Books,Kozlov D.,16,11790.83,0.24,143376.49
+24,2024-08-08,Novosibirsk,Sports,Kozlov D.,30,12971.17,0.02,381352.4
+25,2024-02-01,Yekaterinburg,Food,Ivanov A.,16,2954.69,0.16,39711.03
+26,2024-08-24,Saint Petersburg,Electronics,Kozlov D.,36,1558.84,0.2,44894.59
+27,2024-02-17,Saint Petersburg,Clothing,Kozlov D.,32,7272.24,0.26,172206.64
+28,2024-01-02,Yekaterinburg,Food,Kozlov D.,19,6402.81,0.29,86373.91
+29,2024-09-06,Saint Petersburg,Clothing,Sidorova M.,14,14533.77,0.17,168882.41
+30,2024-01-30,Moscow,Books,Kozlov D.,33,13798.87,0.16,382504.68
+31,2024-04-05,Moscow,Books,Ivanov A.,44,12941.11,0.12,501079.78
+32,2024-10-23,Kazan,Electronics,Volkova E.,6,6346.45,0.18,31224.53
+33,2024-04-14,Novosibirsk,Clothing,Sidorova M.,26,2050.09,0.19,43174.9
+34,2024-02-07,Moscow,Sports,Volkova E.,37,14941.84,0.02,541791.12
+35,2024-06-27,Moscow,Clothing,Sidorova M.,19,2450.43,0.25,34918.63
+36,2024-11-30,Kazan,Electronics,Volkova E.,20,13983.16,0.03,271273.3
+37,2024-02-24,Kazan,Clothing,Sidorova M.,19,9111.96,0.22,135039.25
+38,2024-05-15,Kazan,Sports,Sidorova M.,-1,1475.25,0.13,5133.87
+39,2024-03-07,Novosibirsk,Clothing,Kozlov D.,36,10614.44,0.17,317159.47
+40,2024-12-19,Saint Petersburg,Books,Ivanov A.,24,8779.39,0.04,202277.15
+41,2024-01-21,Novosibirsk,Clothing,Petrov S.,43,1631.62,0.23,54022.94
+42,2024-11-13,Saint Petersburg,Clothing,Petrov S.,12,13233.1,0.01,157209.23
+43,2024-07-29,Saint Petersburg,Food,Petrov S.,45,1710.62,0.26,56963.65
+44,2024-08-23,Novosibirsk,Food,Petrov S.,15,452.6,0.06,6381.66
+45,2024-05-22,Novosibirsk,Books,Kozlov D.,44,14719.13,0.16,544019.04
+46,2024-05-13,Saint Petersburg,Books,Sidorova M.,3,1715.2,0.13,4476.67
+47,2024-11-06,Kazan,Electronics,Kozlov D.,37,2932.17,0.01,107405.39
+48,2024-10-02,Saint Petersburg,Food,Kozlov D.,5,14238.23,0.28,51257.63
+49,2024-03-04,Novosibirsk,Books,Sidorova M.,43,6185.05,0.12,234042.29
+50,2024-08-03,Yekaterinburg,Clothing,Volkova E.,37,4584.15,0.16,
+51,2024-08-08,Kazan,Books,Sidorova M.,30,6682.61,0.2,160382.64
+52,2024-03-27,Moscow,Food,Volkova E.,43,9530.82,0.1,368842.73
+53,2024-12-10,Novosibirsk,Clothing,Petrov S.,10,463.94,0.07,4314.64
+54,2024-02-07,Yekaterinburg,Sports,Volkova E.,13,10803.35,0.12,123590.32
+55,2024-12-18,Moscow,Electronics,Kozlov D.,15,2720.71,0.29,28975.56
+56,2024-05-07,Moscow,Sports,Petrov S.,30,10046.91,0.3,210985.11
+57,2024-08-14,Kazan,Books,Kozlov D.,36,6744.11,0.05,230648.56
+58,2024-05-06,Novosibirsk,Books,Kozlov D.,41,3664.76,0.13,130721.99
+59,2024-06-20,Novosibirsk,Books,Ivanov A.,9,2347.38,0.11,18802.51
+60,2024-07-31,Yekaterinburg,Food,Volkova E.,30,6295.04,0.06,177520.13
+61,2024-10-26,Moscow,Books,Kozlov D.,31,187.85,0.11,5182.78
+62,2024-08-02,Kazan,Books,Volkova E.,15,7374.62,0.08,101769.76
+63,2024-12-08,Yekaterinburg,Clothing,Kozlov D.,9,14712.76,0.16,111228.47
+64,2024-12-05,Moscow,Electronics,Kozlov D.,9,13016.09,0.05,111287.57
+65,2024-08-20,Novosibirsk,Food,Kozlov D.,18,11304.95,0.25,152616.83
+66,2024-01-10,Kazan,Electronics,Sidorova M.,15,9787.15,0.23,113041.58
+67,2024-05-06,Saint Petersburg,Electronics,Volkova E.,10,3654.32,0.14,31427.15
+68,2024-08-26,Novosibirsk,Food,Petrov S.,39,9147.99,0.22,278281.86
+69,2024-06-08,Moscow,Books,Ivanov A.,20,8679.37,0.27,126718.8
+70,2024-04-11,Moscow,Books,Petrov S.,7,10488.18,0.09,66809.71
+71,2024-10-16,Moscow,Food,Volkova E.,28,9956.67,0.02,273211.02
+72,2024-08-03,Yekaterinburg,Electronics,Kozlov D.,24,9570.22,0.25,172263.96
+73,2024-09-24,Novosibirsk,Books,Volkova E.,50,7304.11,0.13,317728.78
+74,2024-05-05,Moscow,Food,Kozlov D.,16,11282.1,0.17,149826.29
+75,2024-09-10,Novosibirsk,Clothing,Kozlov D.,14,5386.89,0.08,69383.14
+76,2024-05-21,Kazan,Electronics,Volkova E.,13,1375.63,0.22,13948.89
+77,2024-12-19,Yekaterinburg,Sports,Kozlov D.,2,1486.49,0.07,2764.87
+78,2024-10-24,Novosibirsk,Sports,Volkova E.,34,5221.99,0.3,124283.36
+79,2024-08-20,Novosibirsk,Food,Sidorova M.,15,1897.77,0.06,26758.56
+80,2024-12-19,Saint Petersburg,Clothing,Petrov S.,48,7314.56,0.22,273857.13
+81,2024-05-24,Moscow,Clothing,Sidorova M.,15,5477.13,0.09,74762.82
+82,2024-01-24,Moscow,Books,Sidorova M.,45,14166.94,0.19,516384.96
+83,2024-01-07,Kazan,Food,Kozlov D.,31,6662.99,0.06,194159.53
+84,2024-09-01,Moscow,Electronics,Kozlov D.,32,1203.82,0.19,31203.01
+85,2024-10-15,Novosibirsk,Electronics,Petrov S.,8,8415.29,0.12,59243.64
+86,2024-09-24,Yekaterinburg,Sports,Kozlov D.,20,12916.48,0.3,180830.72
+87,2024-11-08,Moscow,Clothing,Petrov S.,17,9940.38,0.05,160537.14
+88,2024-01-02,Yekaterinburg,Sports,Volkova E.,31,4439.76,0.07,127998.28
+89,2024-08-20,Moscow,Clothing,Sidorova M.,41,8887.86,0.24,276945.72
+90,2024-04-25,Saint Petersburg,Food,Petrov S.,5,988.61,0.24,3756.72
+91,2024-05-27,Yekaterinburg,Electronics,Kozlov D.,45,4630.96,0.12,183386.02
+92,2024-08-12,Moscow,Books,Ivanov A.,28,11044.56,0.18,
+93,2024-12-11,Kazan,Books,Ivanov A.,49,10117.0,0.08,456074.36
+94,2024-08-28,Kazan,Sports,Sidorova M.,12,14954.49,0.13,156124.88
+95,2024-08-28,Novosibirsk,Sports,Sidorova M.,21,10084.99,0.26,156720.74
+96,2024-05-27,Yekaterinburg,Books,Ivanov A.,30,1412.09,0.08,38973.68
+97,2024-09-20,Moscow,Books,Kozlov D.,27,907.64,0.16,20585.28
+98,2024-08-14,Moscow,Clothing,Sidorova M.,36,2052.1,0.09,67226.8
+99,2024-01-15,Kazan,Clothing,Petrov S.,20,8307.5,0.17,137904.5
+100,2024-02-28,Yekaterinburg,Electronics,Petrov S.,32,13996.53,0.09,407578.95
+101,2024-09-04,Yekaterinburg,Clothing,Kozlov D.,36,2255.17,0.06,76314.95
+102,2024-03-10,Moscow,Food,Kozlov D.,22,14020.3,0.15,262179.61
+103,2024-06-01,Kazan,Books,Kozlov D.,10,6753.56,0.15,57405.26
+104,2024-07-12,Yekaterinburg,Food,Petrov S.,45,3658.2,0.11,146510.91
+105,2024-06-11,Yekaterinburg,Sports,Kozlov D.,43,11906.67,0.2,409589.45
+106,2024-03-05,Kazan,Books,Sidorova M.,7,13125.44,0.13,79933.93
+107,2024-03-14,Yekaterinburg,Clothing,Ivanov A.,31,11744.73,0.08,334959.7
+108,2024-02-11,Novosibirsk,Books,Kozlov D.,21,9439.31,0.27,144704.62
+109,2024-11-12,Moscow,Clothing,Sidorova M.,15,11226.82,0.13,146510.0
+110,2024-02-21,Yekaterinburg,Clothing,Sidorova M.,2,785.27,0.24,1193.61
+111,2024-03-15,Saint Petersburg,Books,Kozlov D.,37,10258.83,0.05,360597.87
+112,2024-07-14,Kazan,Clothing,Kozlov D.,38,2232.45,0.14,72956.47
+113,2024-01-05,Yekaterinburg,Food,Volkova E.,11,1200.54,0.28,9508.28
+114,2024-08-05,Novosibirsk,Sports,Sidorova M.,13,14990.67,0.26,144210.25
+115,2024-07-02,Kazan,Food,Sidorova M.,2,14671.37,0.2,23474.19
+116,2024-12-17,Moscow,Books,Kozlov D.,19,11658.54,0.07,206006.4
+117,2024-04-07,Kazan,Food,Petrov S.,41,1547.74,0.19,51400.45
+118,2024-01-18,Kazan,Food,Petrov S.,6,13653.45,0.1,73728.63
+119,2024-10-03,Novosibirsk,Books,Volkova E.,18,12474.04,0.08,206570.1
+120,2024-05-31,Novosibirsk,Electronics,Kozlov D.,5,2197.28,0.29,7800.34
+121,2024-07-22,Kazan,Food,Ivanov A.,26,307.39,0.16,6713.4
+122,2024-12-10,Novosibirsk,Books,Kozlov D.,41,14110.35,0.03,561168.62
+123,2024-10-14,Novosibirsk,Books,Petrov S.,42,1041.93,0.25,32820.8
+124,2024-07-28,Moscow,Clothing,Ivanov A.,3,4635.03,0.15,11819.33
+125,2024-03-10,Yekaterinburg,Sports,Sidorova M.,43,14245.77,0.21,483928.81
+126,2024-03-20,Yekaterinburg,Electronics,Kozlov D.,40,6180.93,0.29,175538.41
+127,2024-08-15,Yekaterinburg,Clothing,Sidorova M.,7,14715.82,0.11,91679.56
+128,2024-02-01,Yekaterinburg,Food,Petrov S.,8,14240.26,0.25,85441.56
+129,2024-11-23,Kazan,Electronics,Ivanov A.,22,3729.18,0.04,78760.28
+130,2024-10-10,Saint Petersburg,Books,Petrov S.,-1,4995.54,0.04,71935.78
+131,2024-03-15,Saint Petersburg,Books,Sidorova M.,12,1737.9,0.26,15432.55
+132,2024-05-01,Kazan,Food,Ivanov A.,12,4053.98,0.04,46701.85
+133,2024-02-02,Yekaterinburg,Sports,Sidorova M.,33,8945.62,0.14,253876.7
+134,2024-12-03,Kazan,Food,Kozlov D.,42,14463.99,0.02,595337.83
+135,2024-12-17,Moscow,Sports,Kozlov D.,5,13499.07,0.1,60745.82
+136,2024-11-15,Kazan,Books,Sidorova M.,25,14919.95,0.16,313318.95
+137,2024-02-20,Moscow,Books,Petrov S.,28,6828.17,0.07,177805.55
+138,2024-07-31,Moscow,Food,Kozlov D.,21,10010.11,0.11,187088.96
+139,2024-02-04,Moscow,Electronics,Ivanov A.,28,1538.81,0.22,33607.61
+140,2024-10-27,Kazan,Books,Sidorova M.,43,1921.25,0.11,73526.24
+141,2024-01-27,Novosibirsk,Books,Sidorova M.,23,1643.65,0.15,32133.36
+142,2024-02-25,Novosibirsk,Books,Sidorova M.,8,11462.82,0.17,76113.12
+143,2024-11-14,Kazan,Books,Ivanov A.,39,13943.36,0.25,407843.28
+144,2024-12-25,Novosibirsk,Food,Sidorova M.,1,2802.94,0.04,2690.82
+145,2024-11-20,Moscow,Electronics,Volkova E.,14,5705.3,0.14,68691.81
+146,2024-06-15,Kazan,Books,Ivanov A.,4,2418.14,0.23,7447.87
+147,2024-08-14,Yekaterinburg,Sports,Volkova E.,29,6271.34,0.06,170956.73
+148,2024-02-26,Novosibirsk,Books,Kozlov D.,34,10040.28,0.01,337955.82
+149,2024-01-04,Saint Petersburg,Food,Petrov S.,-1,2144.8,0.08,98660.8
+150,2024-08-08,Saint Petersburg,Clothing,Kozlov D.,35,10584.7,0.15,314894.83
+151,2024-02-06,Yekaterinburg,Electronics,Kozlov D.,2,6950.34,0.02,13622.67
+152,2024-07-26,Yekaterinburg,Food,Ivanov A.,26,410.76,0.1,9611.78
+153,2024-12-19,Novosibirsk,Electronics,Kozlov D.,7,3725.42,0.18,21383.91
+154,2024-06-07,Novosibirsk,Clothing,Sidorova M.,50,2605.18,0.15,110720.15
+155,2024-06-27,Novosibirsk,Clothing,Petrov S.,7,2282.02,0.06,15015.69
+156,2024-12-01,Moscow,Clothing,Kozlov D.,30,11341.24,0.23,261982.64
+157,2024-10-16,Kazan,Food,Sidorova M.,10,6652.47,0.14,57211.24
+158,2024-10-29,Moscow,Food,Volkova E.,5,4725.08,0.14,20317.84
+159,2024-02-09,Moscow,Books,Volkova E.,33,5828.79,0.17,159650.56
+160,2024-01-22,Yekaterinburg,Books,Petrov S.,21,9114.59,0.15,162695.43
+161,2024-06-24,Moscow,Books,Petrov S.,3,3791.38,0.13,9895.5
+162,2024-03-22,Novosibirsk,Food,Sidorova M.,25,6190.66,0.1,139289.85
+163,2024-11-27,Novosibirsk,Electronics,Sidorova M.,7,8413.65,0.12,51828.08
+164,2024-11-04,Saint Petersburg,Food,Ivanov A.,38,9987.82,0.28,273266.76
+165,2024-12-05,Yekaterinburg,Clothing,Volkova E.,46,14076.23,0.09,589230.99
+166,2024-03-06,Kazan,Electronics,Kozlov D.,33,5491.24,0.11,161277.72
+167,2024-09-05,Saint Petersburg,Clothing,Petrov S.,10,1249.76,0.25,9373.2
+168,2024-09-26,Moscow,Food,Volkova E.,9,8998.97,0.05,76941.19
+169,2024-11-15,Saint Petersburg,Sports,Ivanov A.,27,5528.06,0.22,116420.94
+170,2024-08-17,Saint Petersburg,Books,Petrov S.,20,14487.39,0.24,220208.33
+171,2024-12-13,Kazan,Sports,Kozlov D.,50,4298.4,0.11,191278.8
+172,2024-04-12,Kazan,Clothing,Sidorova M.,4,9653.57,0.26,28574.57
+173,2024-09-21,Moscow,Food,Ivanov A.,49,2488.65,0.13,106091.15
+174,2024-02-16,Saint Petersburg,Sports,Sidorova M.,2,6281.96,0.12,11056.25
+175,2024-02-11,Novosibirsk,Clothing,Ivanov A.,21,13969.31,0.25,220016.63
+176,2024-03-11,Moscow,Food,Kozlov D.,45,12483.55,0.23,432555.01
+177,2024-02-10,Moscow,Food,Petrov S.,10,8277.18,0.22,64562.0
+178,2024-05-27,Saint Petersburg,Food,Ivanov A.,4,3652.75,0.19,11834.91
+179,2024-09-12,Kazan,Books,Ivanov A.,41,7779.1,0.07,296617.08
+180,2024-11-10,Novosibirsk,Clothing,Volkova E.,27,2890.98,0.2,62445.17
+181,2024-09-26,Kazan,Books,Volkova E.,36,402.98,0.26,10735.39
+182,2024-07-10,Novosibirsk,Electronics,Sidorova M.,5,5237.56,0.22,20426.48
+183,2024-06-19,Saint Petersburg,Electronics,Sidorova M.,35,5144.35,0.19,145842.32
+184,2024-12-22,Yekaterinburg,Clothing,Petrov S.,5,10769.07,0.28,38768.65
+185,2024-04-12,Moscow,Food,Sidorova M.,33,6033.54,0.24,151321.18
+186,2024-11-27,Saint Petersburg,Food,Sidorova M.,50,812.28,0.2,32491.2
+187,2024-08-11,Yekaterinburg,Sports,Kozlov D.,22,14608.48,0.15,273178.58
+188,2024-09-22,Novosibirsk,Electronics,Kozlov D.,6,6516.05,0.3,27367.41
+189,2024-02-22,Moscow,Food,Sidorova M.,20,6744.14,0.22,105208.58
+190,2024-08-16,Moscow,Food,Volkova E.,28,4190.87,0.29,83314.5
+191,2024-11-22,Yekaterinburg,Food,Volkova E.,48,10223.22,0.29,348407.34
+192,2024-08-12,Moscow,Clothing,Ivanov A.,16,11699.88,0.11,166606.29
+193,2024-11-05,Saint Petersburg,Sports,Sidorova M.,24,6714.7,0.02,157929.74
+194,2024-06-09,Novosibirsk,Clothing,Ivanov A.,2,11061.56,0.15,18804.65
+195,2024-05-14,Novosibirsk,Sports,Petrov S.,40,4355.1,0.27,127168.92
+196,2024-02-07,Yekaterinburg,Clothing,Kozlov D.,6,12176.65,0.29,51872.53
+197,2024-12-29,Moscow,Books,Volkova E.,19,13380.84,0.26,188134.61
+198,2024-11-22,Saint Petersburg,Food,Volkova E.,15,1908.3,0.06,26907.03
+199,2024-01-14,Novosibirsk,Books,Volkova E.,24,7064.35,0.29,120376.52
+200,2024-02-03,Novosibirsk,Sports,Kozlov D.,34,6220.85,0.12,186127.83
+201,2024-06-11,Moscow,Sports,Kozlov D.,44,7808.66,0.04,329837.8
+202,2024-10-27,Saint Petersburg,Clothing,Kozlov D.,33,13669.61,0.02,442075.19
+203,2024-03-25,Saint Petersburg,Food,Petrov S.,23,14217.5,0.16,274682.1
+204,2024-04-10,Kazan,Food,Petrov S.,41,4612.09,0.16,158840.38
+205,2024-10-24,Saint Petersburg,Clothing,Volkova E.,47,13539.81,0.1,572733.96
+206,2024-01-15,Moscow,Electronics,Volkova E.,17,9801.84,0.23,128306.09
+207,2024-09-11,Kazan,Food,Sidorova M.,31,3748.68,0.24,88318.9
+208,2024-12-18,Moscow,Clothing,Kozlov D.,27,7315.34,0.06,185663.33
+209,2024-06-12,Novosibirsk,Sports,Petrov S.,49,5621.05,0.17,228608.1
+210,2024-05-16,Yekaterinburg,Clothing,Petrov S.,7,854.02,0.28,4304.26
+211,2024-03-22,Novosibirsk,Books,Sidorova M.,13,11470.51,0.15,126749.14
+212,2024-06-06,Yekaterinburg,Electronics,Ivanov A.,26,7631.12,0.29,140870.48
+213,2024-01-26,Novosibirsk,Sports,Volkova E.,42,10120.56,0.09,
+214,2024-03-09,Novosibirsk,Food,Kozlov D.,24,774.11,0.02,18207.07
+215,2024-05-27,Moscow,Sports,Volkova E.,29,11489.62,0.08,306543.06
+216,2024-03-01,Saint Petersburg,Electronics,Kozlov D.,24,11943.97,0.1,257989.75
+217,2024-04-11,Kazan,Books,Kozlov D.,33,699.8,0.01,22862.47
+218,2024-09-22,Yekaterinburg,Clothing,Volkova E.,33,2182.74,0.28,51861.9
+219,2024-11-11,Novosibirsk,Books,Sidorova M.,33,12441.51,0.16,344878.66
+220,2024-01-09,Novosibirsk,Food,Ivanov A.,27,8797.16,0.24,180517.72
+221,2024-01-14,Kazan,Sports,Sidorova M.,42,11765.27,0.23,380488.83
+222,2024-10-25,Yekaterinburg,Clothing,Volkova E.,41,10845.62,0.23,342396.22
+223,2024-05-04,Moscow,Books,Ivanov A.,13,382.17,0.09,4521.07
+224,2024-07-29,Kazan,Books,Kozlov D.,48,10938.29,0.21,414779.96
+225,2024-12-05,Yekaterinburg,Books,Kozlov D.,21,14354.61,0.14,259244.26
+226,2024-12-12,Novosibirsk,Books,Kozlov D.,13,14364.33,0.08,171797.39
+227,2024-06-01,Novosibirsk,Clothing,Kozlov D.,21,7249.07,0.17,126351.29
+228,2024-05-27,Moscow,Books,Volkova E.,25,13446.83,0.12,295830.26
+229,2024-03-15,Novosibirsk,Electronics,Sidorova M.,46,1277.54,0.28,42312.12
+230,2024-04-19,Saint Petersburg,Books,Sidorova M.,36,10472.95,0.04,361945.15
+231,2024-05-04,Moscow,Books,Petrov S.,41,3569.26,0.03,141949.47
+232,2024-12-14,Saint Petersburg,Electronics,Volkova E.,11,6162.92,0.28,48810.33
+233,2024-04-12,Novosibirsk,Food,Sidorova M.,42,981.52,0.23,31742.36
+234,2024-01-20,Saint Petersburg,Sports,Petrov S.,3,14957.86,0.12,39488.75
+235,2024-05-28,Moscow,Electronics,Sidorova M.,37,9081.47,0.28,241930.36
+236,2024-11-24,Kazan,Books,Kozlov D.,9,12780.79,0.14,98923.31
+237,2024-03-24,Yekaterinburg,Food,Petrov S.,1,11075.61,0.24,8417.46
+238,2024-03-30,Kazan,Sports,Kozlov D.,33,4986.11,0.12,144796.63
+239,2024-09-01,Novosibirsk,Clothing,Ivanov A.,17,5815.26,0.13,86007.7
+240,2024-10-25,Kazan,Electronics,Sidorova M.,42,5457.33,0.07,213163.31
+241,2024-03-22,Yekaterinburg,Books,Sidorova M.,45,1849.49,0.27,60755.75
+242,2024-04-22,Saint Petersburg,Sports,Petrov S.,30,11241.25,0.18,276534.75
+243,2024-08-29,Kazan,Clothing,Petrov S.,44,11345.62,0.26,369413.39
+244,2024-12-26,Novosibirsk,Electronics,Volkova E.,8,1020.19,0.16,6855.68
+245,2024-03-17,Saint Petersburg,Food,Volkova E.,29,1831.98,0.06,49939.77
+246,2024-09-18,Yekaterinburg,Electronics,Kozlov D.,9,7747.39,0.14,59964.8
+247,2024-06-06,Moscow,Sports,Sidorova M.,1,11212.49,0.17,9306.37
+248,2024-02-02,Kazan,Electronics,Ivanov A.,31,572.85,0.12,15627.35
+249,2024-11-26,Yekaterinburg,Food,Kozlov D.,29,13057.34,0.27,276423.89
+250,2024-12-04,Kazan,Clothing,Sidorova M.,8,2759.26,0.16,18542.23
+251,2024-04-24,Moscow,Electronics,Sidorova M.,30,10135.15,0.16,255405.78
+252,2024-05-06,Yekaterinburg,Food,Petrov S.,18,2908.36,0.26,38739.36
+253,2024-12-04,Yekaterinburg,Books,Ivanov A.,16,3170.62,0.03,49208.02
+254,2024-12-26,Moscow,Clothing,Ivanov A.,26,6640.55,0.16,145029.61
+255,2024-03-12,Kazan,Food,Petrov S.,47,8684.04,0.17,338764.4
+256,2024-05-01,Novosibirsk,Clothing,Volkova E.,15,6262.05,0.08,86416.29
+257,2024-03-30,Yekaterinburg,Books,Kozlov D.,4,14587.12,0.28,42010.91
+258,2024-06-12,Yekaterinburg,Sports,Petrov S.,20,5709.26,0.23,87922.6
+259,2024-06-02,Saint Petersburg,Sports,Ivanov A.,36,6248.89,0.12,197964.84
+260,2024-05-10,Saint Petersburg,Food,Ivanov A.,29,12722.29,0.03,357878.02
+261,2024-05-17,Yekaterinburg,Books,Volkova E.,3,13116.94,0.06,36989.77
+262,2024-10-13,Saint Petersburg,Sports,Petrov S.,22,4617.5,0.27,74157.05
+263,2024-03-01,Yekaterinburg,Clothing,Volkova E.,46,3147.25,0.27,105684.65
+264,2024-07-13,Yekaterinburg,Books,Sidorova M.,20,3997.27,0.15,67953.59
+265,2024-08-28,Novosibirsk,Clothing,Sidorova M.,21,6267.56,0.17,109243.57
+266,2024-05-13,Kazan,Books,Volkova E.,47,6321.91,0.05,282273.28
+267,2024-05-05,Yekaterinburg,Books,Sidorova M.,17,11474.07,0.15,165800.31
+268,2024-08-23,Saint Petersburg,Food,Petrov S.,9,10832.67,0.15,82869.93
+269,2024-11-24,Moscow,Books,Ivanov A.,5,14183.3,0.2,56733.2
+270,2024-11-18,Saint Petersburg,Electronics,Petrov S.,1,3358.92,0.14,2888.67
+271,2024-11-11,Yekaterinburg,Sports,Ivanov A.,1,8029.97,0.12,
+272,2024-10-01,Novosibirsk,Electronics,Volkova E.,45,10143.09,0.24,346893.68
+273,2024-02-19,Kazan,Clothing,Petrov S.,13,9334.73,0.08,111643.37
+274,2024-02-10,Novosibirsk,Sports,Kozlov D.,37,3723.8,0.21,108846.67
+275,2024-02-11,Moscow,Electronics,Kozlov D.,25,5719.83,0.14,122976.35
+276,2024-02-12,Yekaterinburg,Sports,Sidorova M.,37,14662.21,0.29,385176.26
+277,2024-04-27,Saint Petersburg,Books,Kozlov D.,18,793.77,0.02,14002.1
+278,2024-10-15,Moscow,Clothing,Sidorova M.,2,14425.89,0.18,23658.46
+279,2024-07-22,Moscow,Food,Petrov S.,37,3683.04,0.25,102204.36
+280,2024-06-18,Yekaterinburg,Clothing,Ivanov A.,33,11207.3,0.1,332856.81
+281,2024-02-08,Novosibirsk,Books,Volkova E.,39,6010.88,0.23,
+282,2024-08-18,Yekaterinburg,Clothing,Sidorova M.,36,14123.03,0.13,442333.3
+283,2024-02-13,Kazan,Food,Petrov S.,46,1195.25,0.08,50582.98
+284,2024-03-19,Yekaterinburg,Food,Sidorova M.,7,1463.65,0.28,7376.8
+285,2024-02-22,Saint Petersburg,Electronics,Petrov S.,28,6787.77,0.17,157747.77
+286,2024-06-30,Kazan,Electronics,Volkova E.,39,11788.14,0.26,
+287,2024-02-13,Kazan,Clothing,Volkova E.,34,2626.79,0.11,79486.67
+288,2024-09-09,Saint Petersburg,Electronics,Petrov S.,28,4211.83,0.09,107317.43
+289,2024-05-06,Yekaterinburg,Books,Volkova E.,13,6922.14,0.04,
+290,2024-11-13,Yekaterinburg,Food,Kozlov D.,22,6516.18,0.25,107516.97
+291,2024-06-02,Novosibirsk,Books,Petrov S.,31,4781.33,0.29,105237.07
+292,2024-12-21,Yekaterinburg,Books,Petrov S.,21,5703.22,0.24,91023.39
+293,2024-10-15,Saint Petersburg,Books,Volkova E.,12,10257.52,0.17,102164.9
+294,2024-12-28,Saint Petersburg,Sports,Sidorova M.,45,1130.46,0.25,38153.03
+295,2024-03-12,Novosibirsk,Clothing,Sidorova M.,43,2396.73,0.13,89661.67
+296,2024-11-02,Yekaterinburg,Books,Kozlov D.,35,7648.53,0.28,192742.96
+297,2024-07-03,Kazan,Books,Ivanov A.,7,11557.42,0.2,64721.55
+298,2024-01-23,Kazan,Sports,Sidorova M.,28,1678.57,0.03,45589.96
+299,2024-10-12,Kazan,Books,Petrov S.,29,5674.38,0.14,141519.04
+300,2024-03-18,Novosibirsk,Electronics,Kozlov D.,7,4501.94,0.28,22689.78
+301,2024-03-13,Novosibirsk,Food,Sidorova M.,30,11785.62,0.16,296997.62
+302,2024-12-22,Yekaterinburg,Food,Ivanov A.,20,765.78,0.21,
+303,2024-02-25,Saint Petersburg,Clothing,Volkova E.,12,8323.46,0.1,89893.37
+304,2024-07-26,Saint Petersburg,Clothing,Kozlov D.,26,534.96,0.18,11405.35
+305,2024-07-18,Moscow,Clothing,Petrov S.,18,11309.65,0.24,154716.01
+306,2024-10-01,Saint Petersburg,Food,Sidorova M.,13,6917.5,0.08,82733.3
+307,2024-11-23,Novosibirsk,Books,Kozlov D.,40,5948.91,0.03,230817.71
+308,2024-03-29,Novosibirsk,Books,Volkova E.,6,10114.44,0.09,55224.84
+309,2024-07-10,Saint Petersburg,Books,Kozlov D.,27,8986.74,0.17,201392.84
+310,2024-10-02,Saint Petersburg,Books,Petrov S.,32,4403.64,0.06,132461.49
+311,2024-07-02,Moscow,Sports,Petrov S.,13,12246.72,0.29,113037.23
+312,2024-12-16,Yekaterinburg,Sports,Kozlov D.,32,2592.08,0.17,68845.64
+313,2024-01-17,Novosibirsk,Clothing,Volkova E.,19,2606.31,0.14,42587.11
+314,2024-10-08,Kazan,Electronics,Volkova E.,8,4091.54,0.16,27495.15
+315,2024-01-22,Yekaterinburg,Books,Petrov S.,28,1626.0,0.25,34146.0
+316,2024-01-17,Yekaterinburg,Food,Sidorova M.,6,6642.14,0.3,27896.99
+317,2024-10-28,Novosibirsk,Books,Kozlov D.,11,9280.65,0.24,77586.23
+318,2024-10-18,Novosibirsk,Books,Sidorova M.,39,8127.65,0.1,285280.52
+319,2024-05-16,Kazan,Electronics,Petrov S.,49,11806.8,0.28,416543.9
+320,2024-03-05,Saint Petersburg,Clothing,Petrov S.,46,4899.24,0.07,209589.49
+321,2024-03-13,Kazan,Food,Kozlov D.,25,6834.68,0.19,138402.27
+322,2024-09-20,Novosibirsk,Food,Kozlov D.,32,4976.61,0.0,159251.52
+323,2024-08-22,Novosibirsk,Electronics,Volkova E.,26,3345.67,0.13,75679.06
+324,2024-05-25,Novosibirsk,Books,Volkova E.,9,8535.52,0.15,65296.73
+325,2024-01-25,Moscow,Electronics,Kozlov D.,-1,1951.13,0.26,2887.67
+326,2024-08-07,Saint Petersburg,Clothing,Sidorova M.,11,13128.91,0.26,106869.33
+327,2024-02-12,Novosibirsk,Clothing,Ivanov A.,26,9421.5,0.22,191068.02
+328,2024-02-16,Moscow,Electronics,Petrov S.,31,1261.29,0.18,32061.99
+329,2024-01-05,Novosibirsk,Electronics,Kozlov D.,45,2069.41,0.02,91260.98
+330,2024-02-22,Moscow,Food,Sidorova M.,20,2143.23,0.23,33005.74
+331,2024-12-12,Saint Petersburg,Electronics,Volkova E.,37,226.27,0.2,6697.59
+332,2024-11-17,Saint Petersburg,Sports,Volkova E.,44,6691.52,0.07,273817.0
+333,2024-03-04,Kazan,Sports,Sidorova M.,28,4786.1,0.04,128650.37
+334,2024-10-10,Kazan,Books,Volkova E.,19,11706.65,0.21,175716.82
+335,2024-06-03,Saint Petersburg,Books,Volkova E.,33,2910.83,0.12,84530.5
+336,2024-05-02,Yekaterinburg,Sports,Ivanov A.,16,7543.78,0.18,98974.39
+337,2024-07-03,Novosibirsk,Clothing,Kozlov D.,37,6370.87,0.16,198006.64
+338,2024-02-07,Moscow,Books,Ivanov A.,1,4006.56,0.01,3966.49
+339,2024-09-16,Novosibirsk,Books,Kozlov D.,28,10556.98,0.02,289683.53
+340,2024-05-22,Moscow,Food,Ivanov A.,33,13821.78,0.29,323844.31
+341,2024-10-27,Moscow,Food,Kozlov D.,47,14306.08,0.07,625318.76
+342,2024-02-29,Yekaterinburg,Books,Volkova E.,4,4708.42,0.22,14690.27
+343,2024-12-28,Saint Petersburg,Electronics,Petrov S.,32,14299.94,0.16,384382.39
+344,2024-03-26,Novosibirsk,Clothing,Sidorova M.,47,13307.58,0.23,
+345,2024-05-19,Kazan,Electronics,Sidorova M.,46,14628.25,0.19,545048.6
+346,2024-01-29,Yekaterinburg,Books,Petrov S.,24,2443.92,0.23,45163.64
+347,2024-02-29,Saint Petersburg,Books,Ivanov A.,3,12894.47,0.0,38683.41
+348,2024-03-17,Saint Petersburg,Electronics,Volkova E.,46,11135.92,0.13,445659.52
+349,2024-06-12,Novosibirsk,Electronics,Volkova E.,24,1879.07,0.2,36078.14
+350,2024-09-21,Moscow,Sports,Ivanov A.,30,13003.88,0.23,300389.63
+351,2024-08-21,Moscow,Food,Petrov S.,19,8500.72,0.09,146977.45
+352,2024-10-29,Yekaterinburg,Clothing,Volkova E.,49,11960.01,0.05,556738.47
+353,2024-10-04,Novosibirsk,Electronics,Sidorova M.,1,11408.04,0.11,10153.16
+354,2024-04-15,Kazan,Clothing,Kozlov D.,32,14421.66,0.29,327660.12
+355,2024-01-23,Saint Petersburg,Books,Kozlov D.,45,13444.11,0.14,520287.06
+356,2024-09-15,Saint Petersburg,Sports,Ivanov A.,38,8560.53,0.13,283011.12
+357,2024-05-13,Novosibirsk,Sports,Sidorova M.,21,6846.09,0.07,133704.14
+358,2024-10-26,Moscow,Clothing,Ivanov A.,11,6798.54,0.09,68053.39
+359,2024-04-16,Yekaterinburg,Food,Kozlov D.,17,12801.98,0.03,211104.65
+360,2024-12-26,Kazan,Electronics,Petrov S.,21,2310.02,0.21,38323.23
+361,2024-01-26,Novosibirsk,Food,Petrov S.,2,14286.24,0.26,21143.64
+362,2024-02-18,Yekaterinburg,Electronics,Petrov S.,8,278.16,0.25,1668.96
+363,2024-07-24,Novosibirsk,Electronics,Volkova E.,38,3956.43,0.24,
+364,2024-11-26,Yekaterinburg,Clothing,Ivanov A.,22,1925.66,0.28,30502.45
+365,2024-08-09,Yekaterinburg,Sports,Ivanov A.,25,10279.87,0.05,244146.91
+366,2024-05-23,Yekaterinburg,Clothing,Ivanov A.,40,9325.73,0.07,346917.16
+367,2024-10-08,Yekaterinburg,Electronics,Ivanov A.,18,5806.93,0.13,90936.52
+368,2024-05-07,Kazan,Electronics,Kozlov D.,46,5450.77,0.16,210617.75
+369,2024-09-14,Novosibirsk,Sports,Sidorova M.,12,488.34,0.18,
+370,2024-05-23,Moscow,Sports,Volkova E.,23,11525.95,0.3,185567.8
+371,2024-12-02,Saint Petersburg,Food,Volkova E.,48,933.04,0.3,31350.14
+372,2024-07-17,Novosibirsk,Clothing,Petrov S.,16,8928.54,0.24,108571.05
+373,2024-01-15,Novosibirsk,Books,Volkova E.,10,8490.32,0.06,79809.01
+374,2024-09-09,Kazan,Food,Petrov S.,32,665.66,0.02,20875.1
+375,2024-09-01,Moscow,Food,Volkova E.,13,12116.04,0.1,141757.67
+376,2024-06-14,Moscow,Electronics,Petrov S.,38,10599.98,0.04,386687.27
+377,2024-07-05,Moscow,Food,Kozlov D.,38,1605.38,0.09,55514.04
+378,2024-08-11,Yekaterinburg,Food,Petrov S.,46,14534.27,0.21,528175.37
+379,2024-04-24,Kazan,Clothing,Kozlov D.,-1,11036.53,0.09,200864.85
+380,2024-12-25,Kazan,Sports,Volkova E.,3,2813.02,0.1,7595.15
+381,2024-11-23,Kazan,Electronics,Kozlov D.,10,5034.41,0.02,49337.22
+382,2024-11-21,Moscow,Food,Kozlov D.,1,4051.67,0.07,3768.05
+383,2024-02-25,Moscow,Electronics,Kozlov D.,29,11015.51,0.29,226809.35
+384,2024-07-12,Novosibirsk,Books,Kozlov D.,7,12449.22,0.24,66229.85
+385,2024-04-25,Saint Petersburg,Sports,Ivanov A.,3,4494.14,0.1,12134.18
+386,2024-03-28,Yekaterinburg,Clothing,Ivanov A.,36,14133.33,0.29,361247.91
+387,2024-09-04,Moscow,Sports,Petrov S.,39,13357.32,0.05,494888.71
+388,2024-04-07,Yekaterinburg,Books,Volkova E.,17,9942.91,0.09,153816.82
+389,2024-10-08,Yekaterinburg,Clothing,Ivanov A.,24,156.85,0.03,3651.47
+390,2024-09-02,Saint Petersburg,Electronics,Ivanov A.,14,2645.4,0.09,33702.4
+391,2024-06-06,Yekaterinburg,Sports,Kozlov D.,43,4048.57,0.19,141011.69
+392,2024-07-14,Novosibirsk,Clothing,Kozlov D.,3,4023.11,0.14,10379.62
+393,2024-02-01,Saint Petersburg,Electronics,Ivanov A.,43,5222.49,0.16,188636.34
+394,2024-10-10,Moscow,Sports,Volkova E.,27,14487.85,0.21,309025.84
+395,2024-04-30,Yekaterinburg,Food,Ivanov A.,26,13551.38,0.21,278345.35
+396,2024-10-19,Kazan,Clothing,Ivanov A.,49,6790.69,0.28,239575.54
+397,2024-04-08,Saint Petersburg,Electronics,Kozlov D.,6,14825.37,0.13,77388.43
+398,2024-10-31,Novosibirsk,Food,Ivanov A.,6,5882.68,0.12,31060.55
+399,2024-08-22,Moscow,Books,Volkova E.,34,11747.12,0.03,387420.02
+400,2024-10-25,Moscow,Electronics,Volkova E.,50,1604.76,0.09,73016.58
+401,2024-07-29,Novosibirsk,Sports,Kozlov D.,37,9173.54,0.01,336026.77
+402,2024-11-07,Yekaterinburg,Electronics,Kozlov D.,22,10388.65,0.01,226264.8
+403,2024-07-09,Moscow,Food,Sidorova M.,20,4277.17,0.15,72711.89
+404,2024-04-26,Saint Petersburg,Food,Kozlov D.,50,12404.77,0.08,570619.42
+405,2024-04-06,Yekaterinburg,Clothing,Kozlov D.,48,7318.46,0.15,298593.17
+406,2024-03-22,Moscow,Food,Volkova E.,26,2121.18,0.26,40811.5
+407,2024-04-08,Saint Petersburg,Electronics,Petrov S.,3,6901.09,0.28,14906.35
+408,2024-08-25,Kazan,Sports,Ivanov A.,44,555.39,0.11,21749.07
+409,2024-08-30,Kazan,Books,Sidorova M.,23,2536.35,0.27,42585.32
+410,2024-05-25,Moscow,Sports,Ivanov A.,11,12821.94,0.23,108601.83
+411,2024-04-25,Saint Petersburg,Food,Kozlov D.,-1,398.78,0.23,10133.0
+412,2024-03-08,Saint Petersburg,Books,Ivanov A.,15,3860.62,0.24,44011.07
+413,2024-11-25,Novosibirsk,Sports,Kozlov D.,23,6939.07,0.07,148426.71
+414,2024-11-15,Yekaterinburg,Books,Ivanov A.,1,7721.55,0.2,6177.24
+415,2024-11-27,Kazan,Books,Sidorova M.,20,10297.76,0.14,177121.47
+416,2024-06-15,Novosibirsk,Food,Sidorova M.,13,2333.95,0.23,23362.84
+417,2024-11-03,Yekaterinburg,Food,Petrov S.,47,479.28,0.15,19147.24
+418,2024-07-26,Yekaterinburg,Electronics,Volkova E.,46,14921.83,0.24,521667.18
+419,2024-12-17,Kazan,Sports,Sidorova M.,33,4572.9,0.05,143360.41
+420,2024-05-30,Moscow,Sports,Petrov S.,48,3953.91,0.24,144238.64
+421,2024-12-14,Novosibirsk,Electronics,Petrov S.,23,3427.59,0.26,58337.58
+422,2024-07-09,Novosibirsk,Books,Sidorova M.,30,12783.09,0.14,329803.72
+423,2024-11-13,Moscow,Sports,Petrov S.,33,1885.26,0.2,49770.86
+424,2024-03-18,Saint Petersburg,Clothing,Sidorova M.,27,14809.15,0.27,291888.35
+425,2024-04-02,Moscow,Sports,Sidorova M.,41,14800.94,0.09,552223.07
+426,2024-04-17,Saint Petersburg,Books,Petrov S.,32,11799.64,0.23,290743.13
+427,2024-08-07,Yekaterinburg,Sports,Kozlov D.,25,169.57,0.16,3560.97
+428,2024-06-13,Kazan,Clothing,Ivanov A.,44,161.45,0.22,5540.96
+429,2024-06-08,Saint Petersburg,Electronics,Kozlov D.,33,8871.19,0.05,278111.81
+430,2024-05-28,Yekaterinburg,Books,Volkova E.,34,5133.74,0.27,127419.43
+431,2024-09-07,Novosibirsk,Clothing,Petrov S.,26,384.96,0.07,9308.33
+432,2024-01-12,Kazan,Books,Petrov S.,8,5562.21,0.2,35598.14
+433,2024-05-10,Kazan,Books,Ivanov A.,39,14920.74,0.2,465527.09
+434,2024-12-19,Moscow,Sports,Kozlov D.,25,1941.57,0.08,44656.11
+435,2024-12-17,Moscow,Food,Kozlov D.,43,1604.6,0.16,57958.15
+436,2024-08-02,Moscow,Books,Volkova E.,8,4312.33,0.24,26218.97
+437,2024-05-14,Kazan,Clothing,Sidorova M.,46,6205.37,0.05,271174.67
+438,2024-12-18,Yekaterinburg,Food,Petrov S.,1,289.97,0.03,281.27
+439,2024-09-09,Saint Petersburg,Electronics,Volkova E.,5,10881.1,0.03,52773.33
+440,2024-05-31,Novosibirsk,Sports,Ivanov A.,7,12216.36,0.26,63280.74
+441,2024-12-12,Novosibirsk,Sports,Ivanov A.,7,12783.56,0.27,
+442,2024-11-27,Saint Petersburg,Food,Sidorova M.,29,14330.83,0.08,382346.54
+443,2024-06-24,Saint Petersburg,Electronics,Kozlov D.,26,14438.42,0.08,345367.01
+444,2024-08-03,Saint Petersburg,Electronics,Petrov S.,45,10923.53,0.29,349006.78
+445,2024-10-29,Yekaterinburg,Books,Kozlov D.,12,9208.72,0.23,85088.57
+446,2024-03-07,Yekaterinburg,Sports,Ivanov A.,27,6666.25,0.02,176388.98
+447,2024-12-13,Kazan,Books,Volkova E.,15,14670.64,0.2,176047.68
+448,2024-12-24,Kazan,Electronics,Kozlov D.,43,10927.11,0.14,404084.53
+449,2024-03-17,Kazan,Books,Ivanov A.,1,9686.64,0.05,9202.31
+450,2024-03-25,Moscow,Sports,Sidorova M.,16,5030.33,0.08,74046.46
+451,2024-07-12,Yekaterinburg,Clothing,Ivanov A.,30,6718.41,0.17,167288.41
+452,2024-06-10,Moscow,Sports,Ivanov A.,7,6111.25,0.01,42350.96
+453,2024-11-05,Kazan,Food,Volkova E.,36,3182.08,0.2,91643.9
+454,2024-01-28,Saint Petersburg,Sports,Sidorova M.,36,11534.5,0.18,340498.44
+455,2024-08-19,Moscow,Electronics,Petrov S.,1,5186.22,0.25,3889.66
+456,2024-09-24,Novosibirsk,Electronics,Ivanov A.,11,7437.09,0.25,61355.99
+457,2024-05-10,Kazan,Clothing,Petrov S.,8,13960.22,0.12,98279.95
+458,2024-06-22,Moscow,Sports,Ivanov A.,41,12578.25,0.18,422880.77
+459,2024-12-03,Kazan,Books,Petrov S.,32,164.63,0.22,4109.16
+460,2024-10-26,Yekaterinburg,Books,Petrov S.,45,8720.46,0.22,306088.15
+461,2024-11-03,Kazan,Food,Volkova E.,25,6338.1,0.18,129931.05
+462,2024-07-22,Novosibirsk,Food,Kozlov D.,9,2158.88,0.18,15932.53
+463,2024-12-25,Kazan,Food,Volkova E.,41,3338.4,0.06,128661.94
+464,2024-12-10,Saint Petersburg,Clothing,Volkova E.,35,10445.25,0.1,329025.38
+465,2024-09-02,Kazan,Books,Kozlov D.,44,11243.24,0.25,371026.92
+466,2024-01-07,Kazan,Electronics,Ivanov A.,25,2265.37,0.2,45307.4
+467,2024-03-23,Novosibirsk,Food,Petrov S.,4,10389.86,0.09,37819.09
+468,2024-08-19,Moscow,Books,Volkova E.,15,11161.95,0.17,138966.28
+469,2024-12-22,Novosibirsk,Electronics,Kozlov D.,25,6306.84,0.24,119829.96
+470,2024-01-28,Moscow,Food,Petrov S.,40,13045.86,0.26,386157.46
+471,2024-11-20,Novosibirsk,Books,Volkova E.,48,9090.47,0.23,335983.77
+472,2024-03-31,Moscow,Clothing,Petrov S.,48,7756.32,0.11,331349.99
+473,2024-03-07,Saint Petersburg,Books,Sidorova M.,1,5025.39,0.21,3970.06
+474,2024-06-14,Kazan,Electronics,Volkova E.,43,4587.21,0.24,149910.02
+475,2024-12-28,Novosibirsk,Books,Petrov S.,12,7857.03,0.24,71656.11
+476,2024-07-25,Moscow,Food,Petrov S.,14,9983.68,0.1,125794.37
+477,2024-11-12,Kazan,Sports,Volkova E.,49,14718.88,0.0,721225.12
+478,2024-11-24,Kazan,Books,Petrov S.,3,10270.02,0.1,27729.05
+479,2024-07-16,Novosibirsk,Books,Sidorova M.,2,13678.91,0.25,20518.36
+480,2024-08-16,Yekaterinburg,Electronics,Sidorova M.,42,2968.43,0.15,105972.95
+481,2024-10-02,Kazan,Electronics,Ivanov A.,14,10087.99,0.23,108748.53
+482,2024-02-23,Saint Petersburg,Books,Kozlov D.,42,12269.64,0.02,505018.38
+483,2024-06-18,Moscow,Electronics,Ivanov A.,4,2752.08,0.08,10127.65
+484,2024-05-12,Yekaterinburg,Sports,Kozlov D.,41,6126.28,0.09,228571.51
+485,2024-01-04,Kazan,Electronics,Volkova E.,3,10543.14,0.02,30996.83
+486,2024-12-17,Novosibirsk,Books,Ivanov A.,19,11502.59,0.13,190137.81
+487,2024-08-30,Saint Petersburg,Books,Petrov S.,9,11226.63,0.24,76790.15
+488,2024-11-20,Saint Petersburg,Food,Sidorova M.,-1,8347.51,0.17,6928.43
+489,2024-11-01,Yekaterinburg,Books,Volkova E.,6,4639.9,0.22,21714.73
+490,2024-07-30,Kazan,Clothing,Petrov S.,12,3389.74,0.25,30507.66
+491,2024-10-17,Moscow,Books,Kozlov D.,42,8290.0,0.09,316843.8
+492,2024-10-24,Yekaterinburg,Food,Sidorova M.,9,10102.3,0.07,84556.25
+493,2024-04-09,Novosibirsk,Sports,Kozlov D.,22,9283.5,0.09,185855.67
+494,2024-07-05,Novosibirsk,Sports,Petrov S.,1,4766.9,0.24,3622.84
+495,2024-05-21,Novosibirsk,Clothing,Sidorova M.,31,6996.44,0.11,193031.78
+496,2024-03-30,Kazan,Electronics,Sidorova M.,9,13380.33,0.06,113197.59
+497,2024-02-08,Moscow,Books,Ivanov A.,38,8725.62,0.23,255311.64
+498,2024-05-13,Kazan,Books,Kozlov D.,42,11650.44,0.11,435493.45
+499,2024-05-28,Saint Petersburg,Sports,Volkova E.,33,1449.25,0.11,
+500,2024-11-10,Saint Petersburg,Books,Petrov S.,29,2472.41,0.17,59510.91
