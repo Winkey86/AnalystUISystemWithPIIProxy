@@ -1,3 +1,5 @@
+name: analyst-app
+
 services:
   open-webui:
     image: ${OPEN_WEBUI_IMAGE:-ghcr.io/open-webui/open-webui:v0.9.1}
@@ -106,6 +108,36 @@ services:
       retries: 12
       start_period: 60s
 
+  analyst-mcp:
+    build:
+      context: ./analyst-mcp
+    container_name: analyst-mcp
+    restart: unless-stopped
+    ports:
+      - "${ANALYST_MCP_PORT:-8082}:8082"
+    environment:
+      PROXY_PROVIDER_URL: http://proxy-provider:8081
+      PROXY_PROVIDER_API_KEY: ${PROXY_PROVIDER_API_KEY:-local-dev-key}
+      ANON_PROXY_URL: http://anon-proxy:8000
+      LLM_MODEL: ${LLM_MODEL:-yandex-private}
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-180}
+      MAX_ROWS_LOAD: ${MAX_ROWS_LOAD:-100000}
+      AUDIT_ENABLED: ${AUDIT_ENABLED:-true}
+    volumes:
+      - analyst-mcp-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8082/health', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    depends_on:
+      proxy-provider:
+        condition: service_healthy
+      anon-proxy:
+        condition: service_healthy
+
 volumes:
   open-webui-data:
   proxy-provider-data:
+  analyst-mcp-data:

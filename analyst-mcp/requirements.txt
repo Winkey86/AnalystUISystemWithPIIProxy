@@ -1,0 +1,32 @@
+# MCP SDK
+mcp[cli]>=1.6
+starlette>=0.36        # транзитивная зависимость mcp, нужна для custom_route
+
+# Данные
+pandas>=2.1
+pyarrow>=14.0
+openpyxl>=3.1
+duckdb>=0.10
+
+# Аналитика
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+scikit-learn>=1.4
+pandera>=0.18
+
+# SQL
+sqlalchemy>=2.0
+sqlglot>=23.0
+
+# Визуализация
+matplotlib>=3.8
+seaborn>=0.13
+
+# HTTP
+httpx>=0.27
+
+# Утилиты
+jsonschema>=4.21
+pydantic>=2.5
+pydantic-settings>=2.2

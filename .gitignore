@@ -3,3 +3,5 @@
 .venv
 .pytest_cache
 vendor/AnonimisationModule/
+__pycache__/
+*.pyc
